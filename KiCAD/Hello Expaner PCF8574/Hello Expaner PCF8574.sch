@@ -9,7 +9,7 @@ Date "2021-07-10"
 Rev ""
 Comp ""
 Comment1 ""
-Comment2 "All LEDs are green"
+Comment2 "All LEDs (except one PB4) are green and active when state on pin is LOW"
 Comment3 "P4 - P7 are configured as inputs"
 Comment4 "P0 - P3 are configured as outputs"
 $EndDescr
@@ -583,6 +583,45 @@ F 1 "9V" H 968 1805 50  0000 L CNN
 F 2 "" V 850 1860 50  0001 C CNN
 F 3 "~" V 850 1860 50  0001 C CNN
 	1    850  1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 60EB9EA7
+P 2450 4800
+F 0 "D?" V 2489 4682 50  0000 R CNN
+F 1 "ERROR_LED_RED" V 2398 4682 50  0000 R CNN
+F 2 "" H 2450 4800 50  0001 C CNN
+F 3 "~" H 2450 4800 50  0001 C CNN
+	1    2450 4800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60EB9EAD
+P 2450 4400
+F 0 "R?" H 2520 4446 50  0000 L CNN
+F 1 "220R" H 2520 4355 50  0000 L CNN
+F 2 "" V 2380 4400 50  0001 C CNN
+F 3 "~" H 2450 4400 50  0001 C CNN
+	1    2450 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 4550 2450 4650
+Wire Wire Line
+	2250 4150 2450 4150
+Wire Wire Line
+	2450 4150 2450 4250
+$Comp
+L power:GND #PWR?
+U 1 1 60EBDD1B
+P 2450 4950
+F 0 "#PWR?" H 2450 4700 50  0001 C CNN
+F 1 "GND" H 2455 4777 50  0000 C CNN
+F 2 "" H 2450 4950 50  0001 C CNN
+F 3 "" H 2450 4950 50  0001 C CNN
+	1    2450 4950
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

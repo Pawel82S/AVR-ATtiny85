@@ -13,11 +13,6 @@
 ; **********************************
 ;
 ; (F2 adds ASCII pin-out for device here)
-;
-; **********************************
-;  P O R T S   A N D   P I N S
-; **********************************
-;                 ;
 ; Device: ATtiny85, Package: 8-pin-PDIP_SOIC
 ;
 ;           _________
@@ -28,7 +23,11 @@
 ;      o--|GND    PB0|--o
 ;       4 |__________|5
 ;
-
+;
+; **********************************
+;  P O R T S   A N D   P I N S
+; **********************************
+;
 ; (Add symbols for all ports and port pins with ".equ" here)
 ; (e.g. .equ pDirD = DDRB ; Define a direction port
 ;  or
