@@ -1,0 +1,588 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Hello Expander PCF8574"
+Date "2021-07-10"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 "All LEDs are green"
+Comment3 "P4 - P7 are configured as inputs"
+Comment4 "P0 - P3 are configured as outputs"
+$EndDescr
+$Comp
+L MCU_Microchip_ATtiny:ATtiny85-20PU U?
+U 1 1 60E9DC7B
+P 1650 4050
+F 0 "U?" H 1121 4096 50  0000 R CNN
+F 1 "ATtiny85-20PU" H 1121 4005 50  0000 R CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 1650 4050 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf" H 1650 4050 50  0001 C CNN
+	1    1650 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Interface_Expansion:PCF8574 U?
+U 1 1 60EA26F7
+P 3850 4050
+F 0 "U?" H 3850 4931 50  0000 C CNN
+F 1 "PCF8574" H 3850 4840 50  0000 C CNN
+F 2 "" H 3850 4050 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/PCF8574_PCF8574A.pdf" H 3850 4050 50  0001 C CNN
+	1    3850 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 3950 3350 4050
+Connection ~ 3350 4050
+Wire Wire Line
+	3350 4050 3350 4150
+Wire Wire Line
+	2250 3950 2950 3950
+Wire Wire Line
+	2950 3950 2950 3650
+Wire Wire Line
+	2950 3650 3350 3650
+Wire Wire Line
+	2250 3850 2450 3850
+Wire Wire Line
+	2750 3850 2750 4450
+Wire Wire Line
+	2750 4450 3350 4450
+Wire Wire Line
+	3300 4750 3850 4750
+Wire Wire Line
+	3350 4050 3300 4050
+Wire Wire Line
+	3300 4050 3300 4750
+$Comp
+L power:GND #PWR0103
+U 1 1 60ED43B1
+P 3850 4950
+F 0 "#PWR0103" H 3850 4700 50  0001 C CNN
+F 1 "GND" H 3855 4777 50  0000 C CNN
+F 2 "" H 3850 4950 50  0001 C CNN
+F 3 "" H 3850 4950 50  0001 C CNN
+	1    3850 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 60ED5A04
+P 1650 4800
+F 0 "#PWR0105" H 1650 4550 50  0001 C CNN
+F 1 "GND" H 1655 4627 50  0000 C CNN
+F 2 "" H 1650 4800 50  0001 C CNN
+F 3 "" H 1650 4800 50  0001 C CNN
+	1    1650 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 4950 3850 4750
+Connection ~ 3850 4750
+Wire Wire Line
+	1650 4800 1650 4650
+$Comp
+L power:+5V #PWR0109
+U 1 1 60EE0482
+P 1650 2950
+F 0 "#PWR0109" H 1650 2800 50  0001 C CNN
+F 1 "+5V" H 1665 3123 50  0000 C CNN
+F 2 "" H 1650 2950 50  0001 C CNN
+F 3 "" H 1650 2950 50  0001 C CNN
+	1    1650 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0110
+U 1 1 60EE08DD
+P 3850 2950
+F 0 "#PWR0110" H 3850 2800 50  0001 C CNN
+F 1 "+5V" H 3865 3123 50  0000 C CNN
+F 2 "" H 3850 2950 50  0001 C CNN
+F 3 "" H 3850 2950 50  0001 C CNN
+	1    3850 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 2950 3850 3350
+Wire Wire Line
+	1650 2950 1650 3450
+Wire Wire Line
+	2250 3750 2700 3750
+$Comp
+L Device:LED D?
+U 1 1 60EACBAD
+P 4600 3450
+F 0 "D?" V 4639 3332 50  0000 R CNN
+F 1 "LED_0" V 4548 3332 50  0000 R CNN
+F 2 "" H 4600 3450 50  0001 C CNN
+F 3 "~" H 4600 3450 50  0001 C CNN
+	1    4600 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60EAD7B9
+P 4600 3050
+F 0 "R?" H 4670 3096 50  0000 L CNN
+F 1 "220R" H 4670 3005 50  0000 L CNN
+F 2 "" V 4530 3050 50  0001 C CNN
+F 3 "~" H 4600 3050 50  0001 C CNN
+	1    4600 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 3200 4600 3300
+$Comp
+L Device:LED D?
+U 1 1 60EB3D8B
+P 5050 3450
+F 0 "D?" V 5089 3332 50  0000 R CNN
+F 1 "LED_1" V 4998 3332 50  0000 R CNN
+F 2 "" H 5050 3450 50  0001 C CNN
+F 3 "~" H 5050 3450 50  0001 C CNN
+	1    5050 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60EB3D91
+P 5050 3050
+F 0 "R?" H 5120 3096 50  0000 L CNN
+F 1 "220R" H 5120 3005 50  0000 L CNN
+F 2 "" V 4980 3050 50  0001 C CNN
+F 3 "~" H 5050 3050 50  0001 C CNN
+	1    5050 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 3200 5050 3300
+$Comp
+L Device:LED D?
+U 1 1 60EB475C
+P 5450 3450
+F 0 "D?" V 5489 3332 50  0000 R CNN
+F 1 "LED_2" V 5398 3332 50  0000 R CNN
+F 2 "" H 5450 3450 50  0001 C CNN
+F 3 "~" H 5450 3450 50  0001 C CNN
+	1    5450 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60EB4762
+P 5450 3050
+F 0 "R?" H 5520 3096 50  0000 L CNN
+F 1 "220R" H 5520 3005 50  0000 L CNN
+F 2 "" V 5380 3050 50  0001 C CNN
+F 3 "~" H 5450 3050 50  0001 C CNN
+	1    5450 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 3200 5450 3300
+$Comp
+L Device:LED D?
+U 1 1 60EB50E2
+P 5850 3450
+F 0 "D?" V 5889 3332 50  0000 R CNN
+F 1 "LED_3" V 5798 3332 50  0000 R CNN
+F 2 "" H 5850 3450 50  0001 C CNN
+F 3 "~" H 5850 3450 50  0001 C CNN
+	1    5850 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60EB50E8
+P 5850 3050
+F 0 "R?" H 5920 3096 50  0000 L CNN
+F 1 "220R" H 5920 3005 50  0000 L CNN
+F 2 "" V 5780 3050 50  0001 C CNN
+F 3 "~" H 5850 3050 50  0001 C CNN
+	1    5850 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 3200 5850 3300
+$Comp
+L Device:R R?
+U 1 1 60EC7DB5
+P 2450 3300
+F 0 "R?" H 2520 3346 50  0000 L CNN
+F 1 "10k" H 2520 3255 50  0000 L CNN
+F 2 "" V 2380 3300 50  0001 C CNN
+F 3 "~" H 2450 3300 50  0001 C CNN
+	1    2450 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60EC9916
+P 2700 3300
+F 0 "R?" H 2770 3346 50  0000 L CNN
+F 1 "10k" H 2770 3255 50  0000 L CNN
+F 2 "" V 2630 3300 50  0001 C CNN
+F 3 "~" H 2700 3300 50  0001 C CNN
+	1    2700 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60ECA014
+P 2950 3300
+F 0 "R?" H 3020 3346 50  0000 L CNN
+F 1 "10k" H 3020 3255 50  0000 L CNN
+F 2 "" V 2880 3300 50  0001 C CNN
+F 3 "~" H 2950 3300 50  0001 C CNN
+	1    2950 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 3450 2950 3650
+Connection ~ 2950 3650
+Wire Wire Line
+	2700 3450 2700 3750
+Connection ~ 2700 3750
+Wire Wire Line
+	2700 3750 3350 3750
+Wire Wire Line
+	2450 3450 2450 3850
+Connection ~ 2450 3850
+Wire Wire Line
+	2450 3850 2750 3850
+$Comp
+L power:+5V #PWR?
+U 1 1 60ED9AD3
+P 2700 2900
+F 0 "#PWR?" H 2700 2750 50  0001 C CNN
+F 1 "+5V" H 2715 3073 50  0000 C CNN
+F 2 "" H 2700 2900 50  0001 C CNN
+F 3 "" H 2700 2900 50  0001 C CNN
+	1    2700 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 3150 2450 3050
+Wire Wire Line
+	2450 3050 2700 3050
+Wire Wire Line
+	2950 3050 2950 3150
+Wire Wire Line
+	2700 3150 2700 3050
+Connection ~ 2700 3050
+Wire Wire Line
+	2700 3050 2950 3050
+Wire Wire Line
+	2700 2900 2700 3050
+Wire Wire Line
+	4600 3600 4600 3650
+Wire Wire Line
+	4600 3650 4350 3650
+Wire Wire Line
+	4350 3750 5050 3750
+Wire Wire Line
+	5050 3750 5050 3600
+Wire Wire Line
+	4350 3850 5450 3850
+Wire Wire Line
+	5450 3850 5450 3600
+Wire Wire Line
+	4350 3950 5850 3950
+Wire Wire Line
+	5850 3950 5850 3600
+Wire Wire Line
+	4350 4050 6650 4050
+Wire Wire Line
+	4350 4150 7650 4150
+Wire Wire Line
+	4350 4250 8650 4250
+Wire Wire Line
+	4350 4350 9650 4350
+Wire Wire Line
+	4600 2900 5050 2900
+Connection ~ 5050 2900
+Wire Wire Line
+	5050 2900 5450 2900
+Connection ~ 5450 2900
+Wire Wire Line
+	5450 2900 5850 2900
+Connection ~ 5850 2900
+Wire Wire Line
+	5850 2900 6650 2900
+Connection ~ 6650 2900
+$Comp
+L power:+5V #PWR?
+U 1 1 60F6A9C1
+P 6650 2700
+F 0 "#PWR?" H 6650 2550 50  0001 C CNN
+F 1 "+5V" H 6665 2873 50  0000 C CNN
+F 2 "" H 6650 2700 50  0001 C CNN
+F 3 "" H 6650 2700 50  0001 C CNN
+	1    6650 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 2900 6650 2700
+$Comp
+L Switch:SW_MEC_5G SW?
+U 1 1 60FB457E
+P 6650 3500
+F 0 "SW?" V 6604 3648 50  0000 L CNN
+F 1 "SW_LED_0" V 6695 3648 50  0000 L CNN
+F 2 "" H 6650 3700 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 6650 3700 50  0001 C CNN
+	1    6650 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60FC244B
+P 6300 3500
+F 0 "C?" H 6415 3546 50  0000 L CNN
+F 1 "100n" H 6415 3455 50  0000 L CNN
+F 2 "" H 6338 3350 50  0001 C CNN
+F 3 "~" H 6300 3500 50  0001 C CNN
+	1    6300 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60FC7AD6
+P 6650 3150
+F 0 "R?" H 6720 3196 50  0000 L CNN
+F 1 "100k" H 6720 3105 50  0000 L CNN
+F 2 "" V 6580 3150 50  0001 C CNN
+F 3 "~" H 6650 3150 50  0001 C CNN
+	1    6650 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 3300 6300 3300
+Wire Wire Line
+	6300 3300 6300 3350
+Connection ~ 6650 3300
+Wire Wire Line
+	6300 3650 6300 3700
+Wire Wire Line
+	6300 3700 6650 3700
+$Comp
+L Switch:SW_MEC_5G SW?
+U 1 1 60FDB096
+P 9650 3500
+F 0 "SW?" V 9604 3648 50  0000 L CNN
+F 1 "SW_LED_3" V 9695 3648 50  0000 L CNN
+F 2 "" H 9650 3700 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 9650 3700 50  0001 C CNN
+	1    9650 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60FDB09C
+P 9300 3500
+F 0 "C?" H 9415 3546 50  0000 L CNN
+F 1 "100n" H 9415 3455 50  0000 L CNN
+F 2 "" H 9338 3350 50  0001 C CNN
+F 3 "~" H 9300 3500 50  0001 C CNN
+	1    9300 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60FDB0A2
+P 9650 3150
+F 0 "R?" H 9720 3196 50  0000 L CNN
+F 1 "100k" H 9720 3105 50  0000 L CNN
+F 2 "" V 9580 3150 50  0001 C CNN
+F 3 "~" H 9650 3150 50  0001 C CNN
+	1    9650 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9650 3300 9300 3300
+Wire Wire Line
+	9300 3300 9300 3350
+Connection ~ 9650 3300
+Wire Wire Line
+	9300 3650 9300 3700
+Wire Wire Line
+	9300 3700 9650 3700
+$Comp
+L Switch:SW_MEC_5G SW?
+U 1 1 60FDC2C5
+P 8650 3500
+F 0 "SW?" V 8604 3648 50  0000 L CNN
+F 1 "SW_LED_2" V 8695 3648 50  0000 L CNN
+F 2 "" H 8650 3700 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 8650 3700 50  0001 C CNN
+	1    8650 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60FDC2CB
+P 8300 3500
+F 0 "C?" H 8415 3546 50  0000 L CNN
+F 1 "100n" H 8415 3455 50  0000 L CNN
+F 2 "" H 8338 3350 50  0001 C CNN
+F 3 "~" H 8300 3500 50  0001 C CNN
+	1    8300 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60FDC2D1
+P 8650 3150
+F 0 "R?" H 8720 3196 50  0000 L CNN
+F 1 "100k" H 8720 3105 50  0000 L CNN
+F 2 "" V 8580 3150 50  0001 C CNN
+F 3 "~" H 8650 3150 50  0001 C CNN
+	1    8650 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 3300 8300 3300
+Wire Wire Line
+	8300 3300 8300 3350
+Connection ~ 8650 3300
+Wire Wire Line
+	8300 3650 8300 3700
+Wire Wire Line
+	8300 3700 8650 3700
+$Comp
+L Switch:SW_MEC_5G SW?
+U 1 1 60FDDA18
+P 7650 3500
+F 0 "SW?" V 7604 3648 50  0000 L CNN
+F 1 "SW_LED_1" V 7695 3648 50  0000 L CNN
+F 2 "" H 7650 3700 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 7650 3700 50  0001 C CNN
+	1    7650 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60FDDA1E
+P 7300 3500
+F 0 "C?" H 7415 3546 50  0000 L CNN
+F 1 "100n" H 7415 3455 50  0000 L CNN
+F 2 "" H 7338 3350 50  0001 C CNN
+F 3 "~" H 7300 3500 50  0001 C CNN
+	1    7300 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60FDDA24
+P 7650 3150
+F 0 "R?" H 7720 3196 50  0000 L CNN
+F 1 "100k" H 7720 3105 50  0000 L CNN
+F 2 "" V 7580 3150 50  0001 C CNN
+F 3 "~" H 7650 3150 50  0001 C CNN
+	1    7650 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 3300 7300 3300
+Wire Wire Line
+	7300 3300 7300 3350
+Connection ~ 7650 3300
+Wire Wire Line
+	7300 3650 7300 3700
+Wire Wire Line
+	7300 3700 7650 3700
+Wire Wire Line
+	9650 2900 9650 3000
+Wire Wire Line
+	8650 3000 8650 2900
+Connection ~ 8650 2900
+Wire Wire Line
+	8650 2900 9650 2900
+Wire Wire Line
+	7650 3000 7650 2900
+Connection ~ 7650 2900
+Wire Wire Line
+	7650 2900 8650 2900
+Wire Wire Line
+	6650 3000 6650 2900
+Wire Wire Line
+	6650 2900 7650 2900
+Wire Wire Line
+	6650 4050 6650 3700
+Connection ~ 6650 3700
+Wire Wire Line
+	7650 3700 7650 4150
+Connection ~ 7650 3700
+Wire Wire Line
+	8650 4250 8650 3700
+Connection ~ 8650 3700
+Wire Wire Line
+	9650 3700 9650 4350
+Connection ~ 9650 3700
+Wire Wire Line
+	850  1900 850  2000
+Wire Wire Line
+	1500 2000 850  2000
+Connection ~ 1500 2000
+Wire Wire Line
+	1500 2000 1500 1850
+Wire Wire Line
+	1950 1550 1800 1550
+Wire Wire Line
+	1950 1200 1950 1550
+$Comp
+L power:+5V #PWR0108
+U 1 1 60EDDFE9
+P 1950 1200
+F 0 "#PWR0108" H 1950 1050 50  0001 C CNN
+F 1 "+5V" H 1965 1373 50  0000 C CNN
+F 2 "" H 1950 1200 50  0001 C CNN
+F 3 "" H 1950 1200 50  0001 C CNN
+	1    1950 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 2200 1500 2000
+$Comp
+L power:GND #PWR0106
+U 1 1 60ED626A
+P 1500 2200
+F 0 "#PWR0106" H 1500 1950 50  0001 C CNN
+F 1 "GND" H 1505 2027 50  0000 C CNN
+F 2 "" H 1500 2200 50  0001 C CNN
+F 3 "" H 1500 2200 50  0001 C CNN
+	1    1500 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	850  1550 1200 1550
+Wire Wire Line
+	850  1600 850  1550
+$Comp
+L Regulator_Linear:LM7805_TO220 U?
+U 1 1 60EB60C2
+P 1500 1550
+F 0 "U?" H 1500 1792 50  0000 C CNN
+F 1 "LM7805_TO220" H 1500 1701 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 1500 1775 50  0001 C CIN
+F 3 "https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF" H 1500 1500 50  0001 C CNN
+	1    1500 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery_Cell BT?
+U 1 1 60EB4708
+P 850 1800
+F 0 "BT?" H 968 1896 50  0000 L CNN
+F 1 "9V" H 968 1805 50  0000 L CNN
+F 2 "" V 850 1860 50  0001 C CNN
+F 3 "~" V 850 1860 50  0001 C CNN
+	1    850  1800
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
